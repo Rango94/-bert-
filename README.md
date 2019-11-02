@@ -9,10 +9,12 @@
 **xlnet**[**《XLNet: Generalized Autoregressive Pretraining for Language Understanding》**](https://arxiv.org/pdf/1906.08237.pdf)
 
 
-**roberta**[**《RoBERTa: A Robustly Optimized BERT Pretraining Approach**](https://arxiv.gg363.site/pdf/1907.11692.pdf)[**》**]()
+**roberta**[**《RoBERTa: A Robustly Optimized BERT Pretraining Approach》**](https://arxiv.gg363.site/pdf/1907.11692.pdf)()
 
 
 **spanbert**[**《SpanBERT: Improving Pre-training by Representing and Predicting Spans》**](https://arxiv.org/pdf/1907.10529.pdf)
+
+**DistilBERT** [**《DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter》**](https://arxiv.org/abs/1910.01108)
 
 <a name="SkF9P"></a>
 # 改进点一览
@@ -34,6 +36,13 @@
 
 表1.后bert时代的bert们所做出的改进<br />
 *unilm相比较bert多使用了三个预训练任务，分别是从左至右的语言模型，从右至左的语言模型，以及seq2seq模型。<br />*albert相比较bert，在nsp任务上添加一种特殊的负例，即模型输入的前一句是后一句的后文。
+
+改进的目的可以被分为两类
+一类是为了提升下游任务的精度。
+包括XLnet，roberta，spanbert，unilm
+一类是为了缩减模型参数。提升训练速度和降低部署难度
+albert，DistilBERT
+
 
 | XLnet | 将自编码式模型改为自回归式模型，期望填补原bert中mask符造成的训练，预测阶段的gap，主要是为生成式模型服务。 |
 | --- | --- |
